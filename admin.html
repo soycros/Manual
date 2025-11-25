@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/posts.js"></script>
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Panel de Administración</h1>
+
+    <button onclick="logout()">Salir</button>
+
+    <h2>Crear nuevo post</h2>
+    <input id="titulo" placeholder="Título del problema">
+    <textarea id="contenido" placeholder="Descripción o procedimiento"></textarea>
+    <button onclick="crearPost()">Guardar</button>
+
+    <h2>Posteos existentes</h2>
+    <div id="listaPosts"></div>
+  </div>
+</body>
+</html>

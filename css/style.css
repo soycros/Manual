@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f3f7;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: white;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0002;
+}
+
+.center {
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 18px;
+  background: #006aff;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0052c7;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.post-item {
+  background: #eef3ff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
