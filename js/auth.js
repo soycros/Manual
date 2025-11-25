@@ -1,5 +1,5 @@
-const SALT = "b72c3f0c19c2a1234eb1a80cf7f2d1d3";  // SALT predefinida
-const ADMIN_PASSWORD_HASH = "7b9d52e3bbf759c3f1a1b8ecda3bbd7f3c1a2638c4a2f0e00b514bc7a1c40e0c";  // Hash final de la contraseña
+const SALT = "b72c3f0c19c2a1234eb1a80cf7f2d1d3";  // La SALT predefinida
+const ADMIN_PASSWORD_HASH = "7b9d52e3bbf759c3f1a1b8ecda3bbd7f3c1a2638c4a2f0e00b514bc7a1c40e0c";  // El hash final almacenado de la contraseña
 
 // Función para hacer SHA-256
 async function sha256(message) {
@@ -12,10 +12,11 @@ async function sha256(message) {
 // Función que hace 100 iteraciones del hash (para pruebas rápidas)
 async function hashPassword(password) {
     let value = password + SALT;
-    console.log("Original password + salt:", password + SALT);  // Log del texto antes de hacer el hash
+    console.log("Concatenado (Contraseña + Salt):", password + SALT);  // Log de la concatenación
     for (let i = 0; i < 100; i++) {  // Usamos 100 iteraciones para pruebas rápidas
         value = await sha256(value);
     }
+    console.log("Hash final después de 100 iteraciones:", value);  // Verifica el hash final
     return value;
 }
 
