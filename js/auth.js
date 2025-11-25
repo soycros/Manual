@@ -11,16 +11,16 @@ async function sha256(message) {
 
 // Función para hacer el hashing con 100 iteraciones
 async function hashPassword(password) {
-    // Paso 1: Hasheamos la contraseña
+    // Paso 1: Hashear la contraseña primero
     let passwordHash = await sha256(password);  
     console.log("Hash de la contraseña (SHA-256):", passwordHash);  // Verifica el hash de la contraseña
     
-    // Paso 2: Concatenamos el hash de la contraseña con la SALT
-    let value = passwordHash + SALT;
+    // Paso 2: Concatenar el hash de la contraseña con la SALT
+    let value = passwordHash + SALT;  // Concatenamos el hash con la SALT
     console.log("Concatenado (Hash de la contraseña + Salt):", value);  // Verifica la concatenación
     
     // Paso 3: Realizamos 100 iteraciones de SHA-256
-    for (let i = 0; i < 100; i++) {  // 100 iteraciones para pruebas rápidas
+    for (let i = 0; i < 100; i++) {  // Realizamos 100 iteraciones
         value = await sha256(value);
     }
 
