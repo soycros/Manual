@@ -1,5 +1,5 @@
 const SALT = "b72c3f0c19c2a1234eb1a80cf7f2d1d3";  // SALT predefinida
-const ADMIN_PASSWORD_HASH = "7b9d52e3bbf759c3f1a1b8ecda3bbd7f3c1a2638c4a2f0e00b514bc7a1c40e0c";  // El hash final almacenado de la contraseña
+const ADMIN_PASSWORD_HASH = "fbd4a5f5e563e32a73528057a89a8c63aca3aeaf0939f5ba62f61a3e012868d6";  // El hash final almacenado de la contraseña
 
 // Función para hacer SHA-256
 async function sha256(message) {
