@@ -1,7 +1,6 @@
 const SALT = "b72c3f0c19c2a1234eb1a80cf7f2d1d3"; 
 const ADMIN_PASSWORD_HASH = "fbd4a5f5e563e32a73528057a89a8c63aca3aeaf0939f5ba62f61a3e012868d6";  // El hash final almacenado de la contraseña
 
-// Función para hacer SHA-256
 async function sha256(message) {
     const data = new TextEncoder().encode(message);
     const hashBuffer = await crypto.subtle.digest("SHA-256", data);
@@ -9,7 +8,6 @@ async function sha256(message) {
     return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
 }
 
-// Función para hacer el hashing con 100 iteraciones
 async function hashPassword(password) {
     // Paso 1: Hashear la contraseña primero
     let passwordHash = await sha256(password);  
